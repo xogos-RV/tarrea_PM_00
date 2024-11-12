@@ -2,7 +2,7 @@
     "name": "input_action",
     "maps": [
         {
-            "name": "New action map",
+            "name": "ActionMap",
             "id": "f7f98467-98e1-45df-89ff-f2cbf08c438e",
             "actions": [
                 {
