@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "tarea_1.sln"
+    "dotnet.defaultSolution": "tarea_0.sln"
 }
