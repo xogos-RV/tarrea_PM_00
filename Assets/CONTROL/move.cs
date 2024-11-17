@@ -5,21 +5,26 @@ public class ObjectMover : MonoBehaviour
 {
     [SerializeField] InputActionAsset inputAction;
     [SerializeField] float force;
+    [SerializeField] float rotationForce;
     private InputAction moveAction;
-    Rigidbody rb;
+    private InputAction turnAction;
+    private Rigidbody rb;
 
     void Start()
     {
-        force = 3.0f;
+        rotationForce = 15.0f;
+        force = 15.0f;
         rb = GetComponent<Rigidbody>();
     }
 
     private void OnEnable()
     {
         moveAction = inputAction.FindActionMap("ActionMap").FindAction("move");
+        turnAction = inputAction.FindActionMap("ActionMap").FindAction("turn");
         if (moveAction != null)
         {
             moveAction.Enable();
+            turnAction.Enable();
         }
         else
         {
@@ -30,15 +35,21 @@ public class ObjectMover : MonoBehaviour
     private void OnDisable()
     {
         moveAction.Disable();
+        turnAction.Disable();
     }
 
     void Update()
     {
         if (moveAction != null)
         {
-            Vector2 inputVector = moveAction.ReadValue<Vector2>();
-            Vector3 vectorForce = rb.GetAccumulatedForce();
-            rb.AddForce(inputVector.x + vectorForce.x * force, 0, inputVector.y + vectorForce.z * force);
+            Vector2 inputMoveVector = moveAction.ReadValue<Vector2>();
+            Vector3 accumulatedForce = rb.GetAccumulatedForce();
+            Vector3 forwardForce = transform.forward * inputMoveVector.y * force;
+            rb.AddForce(forwardForce + accumulatedForce, ForceMode.Force);
+
+            Vector2 inputTurnVector = turnAction.ReadValue<Vector2>();
+            Vector3 rotationTorque = Vector3.up * inputTurnVector.x * rotationForce;
+            rb.AddTorque(rotationTorque, ForceMode.Force);
         }
         else
         {

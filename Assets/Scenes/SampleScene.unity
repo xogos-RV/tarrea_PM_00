@@ -3059,7 +3059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAction: {fileID: -944628639613478452, guid: 1ecac2ee10b42cb4bb4ea1bd2a91d26b, type: 3}
-  force: 1
+  force: 3.13
+  rotationForce: 100
 --- !u!54 &1582818898
 Rigidbody:
   m_ObjectHideFlags: 0
