@@ -1024,6 +1024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658491789}
   - component: {fileID: 658491788}
+  - component: {fileID: 658491790}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1058,6 +1059,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658491790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658491787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454eed49c1ae2ec4f8b13c97df3d0cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 1582818895}
 --- !u!1 &691898422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,13 +1987,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20535019, y: 0, z: 0, w: 0.9786886}
-  m_LocalPosition: {x: 0, y: 12.5, z: -25.5}
+  m_LocalRotation: {x: 0.20229238, y: 0.16826507, z: -0.03530568, w: 0.96411526}
+  m_LocalPosition: {x: -6.7, y: 11.1, z: -23.1}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 23.7, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 23.7, y: 19.8, z: 0}
 --- !u!1 &976610534
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,7 +3048,7 @@ Transform:
   m_GameObject: {fileID: 1582818895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -5, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1.3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
