@@ -24,6 +24,7 @@ public class agmeManager : MonoBehaviour
 
         if (car.transform.position.y <= -10)
         {
+            resetCarPosition.y = 10;
             car.transform.position = resetCarPosition;
         }
     }
